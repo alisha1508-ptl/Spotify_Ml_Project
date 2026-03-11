@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Spotify Popularity Prediction</title>
+</head>
+<body>
+
+<h2>Spotify Song Popularity Predictor</h2>
+
+<form action="/predict" method="post">
+
+    Danceability: <input type="text" name="danceability"><br><br>
+    Energy: <input type="text" name="energy"><br><br>
+    Loudness: <input type="text" name="loudness"><br><br>
+    Tempo: <input type="text" name="tempo"><br><br>
+
+    <button type="submit">Predict</button>
+
+</form>
+
+{% if prediction %}
+<h3>Prediction: {{ prediction }}</h3>
+{% endif %}
+
+</body>
+</html>
